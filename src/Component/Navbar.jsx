@@ -1,62 +1,93 @@
-  import React, { useEffect, useState } from "react";
-  import { Link, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
-  const Navbar = () => {
-    const [currentUser, setCurrentUser] = useState(null);
-    const navigate = useNavigate();
+const Navbar = () => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
-    useEffect(() => {
-      const savedUser = JSON.parse(localStorage.getItem("currentUser"));
-      if (savedUser && savedUser.username) {
-        setCurrentUser(savedUser.username);
-      }
-    }, []);
+  useEffect(() => {
+    const savedUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (savedUser && savedUser.username) {
+      setCurrentUser(savedUser.username);
+    }
+  }, []);
 
-    const handleLogout = () => {
-      localStorage.removeItem("currentUser");
-      setCurrentUser(null);
-      navigate("/login");
-    };
-
-    return (
-      <nav className="navbar">
-        <h1>
-          Go<span>Iphone</span>
-        </h1>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/cart">Cart</Link></li>
-
-          {currentUser ? (
-            <>
-              <li style={{ color: "#ff0000", fontWeight: "bold" }}>
-                👋 Hello, {currentUser}
-              </li>
-              <li>
-                <button
-                  onClick={handleLogout}
-                  style={{
-                    background: "transparent",
-                    border: "1px solid #ff0000",
-                    color: "#fff",
-                    padding: "5px 10px",
-                    borderRadius: "5px",
-                    cursor: "pointer",
-                  }}
-                >
-                  Logout
-                </button>
-              </li>
-            </>
-          ) : (
-            <>
-              <li><Link to="/login">Login</Link></li>
-              <li><Link to="/signup">Signup</Link></li>
-            </>
-          )}
-        </ul>
-      </nav>
-    );
+  const handleLogout = () => {
+    localStorage.removeItem("currentUser");
+    setCurrentUser(null);
+    navigate("/login");
   };
 
-  export default Navbar;
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
+  return (
+    <nav className="navbar">
+      <h1>
+        Go<span>Iphone</span>
+      </h1>
+
+      <div
+        className={`menu-toggle ${menuOpen ? "active" : ""}`}
+        onClick={toggleMenu}
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul className={menuOpen ? "show" : ""}>
+        <li>
+          <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+        </li>
+        <li>
+          <Link to="/cart" onClick={() => setMenuOpen(false)}>Cart</Link>
+        </li>
+
+        {currentUser ? (
+          <>
+            <li style={{ color: "#ff004c", fontWeight: "bold" }}>
+              👋 Hello, {currentUser}
+            </li>
+            <li>
+              <button
+                onClick={() => {
+                  handleLogout();
+                  setMenuOpen(false);
+                }}
+                style={{
+                  background: "transparent",
+                  border: "1px solid #ff004c",
+                  color: "#fff",
+                  padding: "6px 12px",
+                  borderRadius: "6px",
+                  cursor: "pointer",
+                }}
+              >
+                Logout
+              </button>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link to="/login" onClick={() => setMenuOpen(false)}>
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link to="/signup" onClick={() => setMenuOpen(false)}>
+                Signup
+              </Link>
+            </li>
+          </>
+        )}
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
+

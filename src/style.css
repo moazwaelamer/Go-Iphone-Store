@@ -52,6 +52,7 @@ body {
   list-style: none;
   display: flex;
   gap: 25px;
+  transition: all 0.4s ease;
 }
 
 .navbar ul li a {
@@ -81,6 +82,67 @@ body {
 .navbar ul li a:hover {
   color: #ff004c;
   text-shadow: 0 0 10px #ff004c;
+}
+
+/* ================== Responsive Navbar ================== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar ul {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    max-height: 0;
+    overflow: hidden;
+    text-align: center;
+    transition: max-height 0.4s ease;
+  }
+
+  .navbar ul.show {
+    max-height: 300px;
+    padding: 20px 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Animation for hamburger icon toggle */
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
 }
 
 /* ================== Main ================== */
