@@ -64,27 +64,38 @@ export const products = {
 
 export default products;
 
+
+
 // ------------------ CART FUNCTIONS ------------------
 
 export const getCartKey = () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
   return currentUser && currentUser.username
     ? `cart_${currentUser.username}`
-    : "cart_guest";
+    : null;
 };
 
 export const getCart = () => {
   const cartKey = getCartKey();
+  if (!cartKey) return []; 
   return JSON.parse(localStorage.getItem(cartKey)) || [];
 };
 
 export const saveCart = (cart) => {
   const cartKey = getCartKey();
+  if (!cartKey) return; 
   localStorage.setItem(cartKey, JSON.stringify(cart));
 };
 
 export const addToCart = (product) => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+  // ✅ لازم يكون عامل Login
+  if (!currentUser || !currentUser.username) {
+   toast.warn("⚠️ Please log in first to add products to your cart.");
+    return;
+  }
+
   const cartKey = getCartKey();
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
 
@@ -96,7 +107,8 @@ export const addToCart = (product) => {
   }
 
   localStorage.setItem(cartKey, JSON.stringify(cart));
-  toast.success(`🛒 ${product.title} added to your cart!`);
+  toast.success(`🛒 ${product.title} has been added to your cart!`);
+
 };
 
 export const changeQty = (id, amount) => {
@@ -167,8 +179,6 @@ export const loginUser = (username, password) => {
   return { success: true, user: savedUser };
 };
 
-
-
 export const logoutUser = () => {
   localStorage.removeItem("currentUser");
   toast.info("You have been logged out.");
@@ -230,5 +240,6 @@ export const useAuth = () => {
 
   return { user, login, signup, logout };
 };
+
 
 
