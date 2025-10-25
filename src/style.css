@@ -7,29 +7,44 @@
 /* ================== Body ================== */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(120deg, #0f0f0f, #1b1b2f, #16213e);
   background-size: 400% 400%;
   color: #f1f1f1;
   overflow-x: hidden;
   animation: bgMove 10s ease infinite;
+  body {
+  background: linear-gradient(120deg, #f6f7fb, #ffffff);
+  color: #222; 
 }
+}
+
 
 @keyframes bgMove {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+h1, h2, h3, h4, h5 {
+  color: #111 !important; 
+}
+#cart-container h2,
+.form-container h2 {
+  color: #000;
+}
 
+.cart-details h3,
+.cart-details p {
+  color: #111;
+}
 /* ================== Navbar ================== */
 .navbar {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(12px);
-  color: white;
+ background: #ffffff;
+  color: #111;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 35px;
-  box-shadow: 0 4px 25px rgba(255, 0, 0, 0.3);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -44,7 +59,7 @@ body {
 }
 
 .navbar h1 span.go {
-  color: #ffffff;
+  color:  #000;
   text-decoration: none;
 }
 
@@ -61,7 +76,7 @@ color: #ffd700;
 }
 
 .navbar ul li a {
-  color: #fff;
+  color: #111;
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -73,7 +88,7 @@ color: #ffd700;
   position: absolute;
   width: 0%;
   height: 2px;
-  background: #ff004c;
+
   left: 0;
   bottom: -4px;
   transition: width 0.3s ease;
@@ -84,10 +99,16 @@ color: #ffd700;
   width: 100%;
 }
 
-.navbar ul li a:hover {
-  color: #ff004c;
-  text-shadow: 0 0 10px #ff004c;
+.navbar ul li a {
+  transition: all 0.3s ease;
 }
+
+.navbar ul li a:hover {
+  color: #ffd700; 
+ 
+  transform: scale(1.05);
+}
+
 .logo {
   text-decoration: none;
   color: inherit;
@@ -128,7 +149,7 @@ main {
 
 .product-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 0 25px rgba(255, 0, 76, 0.3);
+box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
 }
 
 .product-card img {
@@ -148,24 +169,24 @@ main {
 .product-card h3 {
   margin: 12px 0 8px;
   font-size: 20px;
-  color: #fff;
+  color: #111;
 }
 
 .product-card p {
   font-size: 15px;
-  color: #ccc;
+  color: #222;;
 }
 
 .price {
   font-weight: bold;
-  color: #ff004c;
+  color: #d4af37;
   font-size: 18px;
 }
 
 /* ================== Buttons ================== */
 .product-card button {
-  background: linear-gradient(90deg, #ff004c, #ff2a6d);
-  color: white;
+  background: linear-gradient(90deg, #d4af37, #ffd700, #ffec8b);
+  color: #111;
   border: none;
   padding: 12px;
   width: 90%;
@@ -176,26 +197,27 @@ main {
 }
 
 .product-card button:hover {
-  transform: scale(1.07);
-  box-shadow: 0 0 15px #ff004c;
+  box-shadow: 0 0 12px rgba(212,175,55,0.5);
+  transform: scale(1.05);
 }
 
 /* ================== Forms ================== */
 .form-container {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   width: 360px;
   margin: 60px auto;
   padding: 35px;
   border-radius: 12px;
-  box-shadow: 0 5px 25px rgba(255, 0, 76, 0.1);
+  box-shadow: 0 5px 25px rgba(212, 175, 55, 0.2); 
   animation: fadeUp 1s ease;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 }
 
 .form-container h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #fff;
+  color: #d4af37; 
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
 }
 
 .form-container input {
@@ -203,31 +225,58 @@ main {
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 6px;
-  border: 1px solid #555;
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  background: rgba(255, 255, 255, 0.15);
+   background-color: #f5f5f5; 
+  color: #222; 
+  transition: all 0.3s ease;
+}
+
+.form-container input:focus {
+  border-color: #ffd700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  outline: none;
 }
 
 .form-container button {
   width: 100%;
-  background: linear-gradient(90deg, #ff004c, #ff2a6d);
-  color: white;
+  background: linear-gradient(90deg, #d4af37, #ffd700, #ffec8b);
+  color: #111;
   padding: 12px;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
 }
 
 .form-container button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 15px #ff004c;
+  transform: scale(1.07);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+.form-container p {
+  text-align: center;
+  color: #555; /* رمادي غامق واضح على خلفية بيضاء */
+  font-size: 14px;
+}
+
+.form-container p a {
+  color: #b8860b; /* لون ذهبي غامق متناسق مع الثيم */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.form-container p a:hover {
+  color: #d4af37; /* ذهبي فاتح عند المرور */
+  text-shadow: 0 0 5px rgba(212, 175, 55, 0.4);
 }
 
 /* ================== Footer ================== */
 footer {
-  background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-  color: #fff;
+background: #f8f8f8;
+  color: #333;
   text-align: center;
   padding: 40px 15px; 
   font-family: "Poppins", sans-serif;
@@ -238,6 +287,7 @@ footer {
   max-width: 700px; 
   margin: 0 auto;
   animation: fadeInUp 1s ease;
+  
 }
 
 .footer-container h3 {
@@ -246,10 +296,11 @@ footer {
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+  color: #000;
 }
 
 .footer-container p {
-  color: #ccc;
+  color: #555;
   line-height: 1.7;
   font-size: 14px;
   margin-bottom: 25px;
@@ -283,7 +334,7 @@ footer {
 }
 
 .footer-links a {
-  color: #aaa;
+ color: #444;
   margin: 0 10px;
   font-size: 13px;
   text-decoration: none;
@@ -291,7 +342,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: #ff004c;
+  color: #d4af37;
 }
 
 footer .copyright {
@@ -300,7 +351,7 @@ footer .copyright {
   margin-top: 10px;
 }
 footer .footer-container h3 span.go {
-  color: #ffffff;
+  color: #000;
 }
 
 footer .footer-container h3 span.phone {
@@ -358,191 +409,146 @@ footer .footer-container h3 span.phone {
 }
 /* ================== Cart Page ================== */
 #cart-container {
-  max-width: 900px;
-  margin: 60px auto;
-  padding: 25px;
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: 16px;
-  box-shadow: 0 0 25px rgba(255, 0, 76, 0.15);
-  backdrop-filter: blur(8px);
+  width: 100%; /* تاخد عرض الصفحة كله */
+  margin: 0 auto;
+  padding: 40px 60px;
+  background: #fff; /* خلي الخلفية بيضاء وواضحة */
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
   animation: fadeUp 0.8s ease;
 }
 
+/* العنوان */
 #cart-container h2 {
-  color: #ff004c;
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 28px;
-  font-weight: 600;
+  color: #d4af37;
+  text-align: left;
+  margin-bottom: 35px;
+  font-size: 30px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
 }
 
+/* ===== كل منتج ===== */
 .cart-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(0, 0, 0, 0.3);
+  align-items: flex-start;
+  justify-content: flex-start;
+  background: #fafafa;
   border-radius: 12px;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
   transition: all 0.3s ease;
+  gap: 25px;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .cart-item:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 15px rgba(255, 0, 76, 0.3);
+  transform: scale(1.01);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
 }
 
+/* الصورة */
 .cart-item img {
-  width: 90px;
-  height: 90px;
-  object-fit: cover;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  background: #fff;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.25);
 }
 
+/* التفاصيل */
 .cart-details {
   flex: 1;
-  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: left;
+  padding-top: 5px;
 }
 
 .cart-details h3 {
-  font-size: 18px;
-  color: #fff;
-  margin-bottom: 5px;
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
 .cart-details p {
-  color: #ccc;
-  font-size: 15px;
-  margin-bottom: 5px;
+  color: gray; /* السعر رمادي */
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
+/* أزرار + و - */
 .quantity-controls {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .quantity-controls button {
-  background: linear-gradient(90deg, #ff004c, #ff2a6d);
+  background: linear-gradient(90deg, #b8860b, #ffd700, #ffec8b);
   border: none;
-  color: white;
-  padding: 6px 12px;
+  color: #111;
+  padding: 8px 14px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
 }
 
 .quantity-controls button:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 10px #ff004c;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
 }
 
 .quantity-controls span {
-  color: #fff;
-  font-size: 16px;
+  color: #222;
+  font-size: 17px;
   font-weight: 500;
 }
 
+/* زر الحذف */
 .delete-btn {
   background: transparent;
-  border: 1px solid #ff004c;
-  color: #ff004c;
-  padding: 6px 14px;
+  border: 1px solid #d4af37;
+  color: #b8860b;
+  padding: 8px 18px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: 600;
+  align-self: flex-start;
 }
 
 .delete-btn:hover {
-  background: #ff004c;
-  color: white;
+  background: linear-gradient(90deg, #d4af37, #ffd700);
+  color: #111;
   transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.5);
 }
 
+/* الإجمالي */
 .cart-summary {
   text-align: right;
-  margin-top: 30px;
+  margin-top: 40px;
   font-weight: bold;
-  color: #fff;
-  font-size: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 15px;
+  color: #000;
+  font-size: 24px;
+  border-top: 1px solid rgba(212, 175, 55, 0.3);
+  padding-top: 20px;
 }
-/* ================== Mobile Navbar Fix ================== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 6px;
-  }
 
-  .menu-toggle span {
-    width: 26px;
-    height: 3px;
-    background: #fff;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-  }
 
-  /* المنيو نفسها */
-  .navbar ul {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    text-align: center;
-    transition: all 0.4s ease;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
-  }
 
-  .navbar ul.show {
-    opacity: 1;
-    visibility: visible;
-    padding: 20px 0;
-  }
 
-  .navbar ul li {
-    margin: 10px 0;
-  }
-}
-@media (max-width: 700px) {
-  .products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px;
-    justify-items: center;
-    align-items: stretch; 
-  }
-
-  .product-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: 360px; 
-    box-sizing: border-box;
-  }
-
-  .product-card img {
-    height: 180px;
-    object-fit: contain;
-    flex-shrink: 0;
-  }
-  .product-card:last-child:nth-child(odd) {
-    grid-column: 1 / -1;      
-    justify-self: center;     
-    width: 60%;               
-  }
-}
-/* ================== Navbar Responsive (منيو الموبايل فقط) ================== */
+/* ================== Navbar Responsive ================== */
 
 /* في الشاشات الكبيرة */
 .navbar ul {
@@ -577,7 +583,7 @@ footer .footer-container h3 span.phone {
   .menu-toggle span {
     width: 28px;
     height: 3px;
-    background: #fff;
+    background: #111; /* لون غامق يناسب الثيم الفاتح */
     border-radius: 3px;
     transition: all 0.4s ease;
   }
@@ -603,10 +609,10 @@ footer .footer-container h3 span.phone {
     width: 100%;
     flex-direction: column;
     text-align: center;
-    background: linear-gradient(135deg, rgba(15, 15, 25, 0.96), rgba(25, 20, 40, 0.96));
-    backdrop-filter: blur(14px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.95); /* خلفية فاتحة */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.45s ease;
     opacity: 0;
     visibility: hidden;
@@ -627,7 +633,7 @@ footer .footer-container h3 span.phone {
   }
 
   .navbar ul li a {
-    color: #f5f5f5;
+    color: #111; /* غامق يناسب الخلفية الفاتحة */
     text-decoration: none;
     font-size: 18px;
     font-weight: 500;
@@ -636,7 +642,81 @@ footer .footer-container h3 span.phone {
 
   .navbar ul li a:hover {
     color: #ff004c;
-    text-shadow: 0 0 10px rgba(255, 0, 76, 0.7);
-    transform: scale(1.08);
+    text-shadow: 0 0 8px rgba(255, 0, 76, 0.5);
+    transform: scale(1.07);
   }
 }
+
+/* ================== Products Responsive ================== */
+@media (max-width: 700px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    justify-items: center;
+    align-items: stretch;
+  }
+
+  .product-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 360px;
+    box-sizing: border-box;
+  }
+
+  .product-card img {
+    height: 180px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .product-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 60%;
+  }
+}
+
+/* ================== Cart Responsive ================== */
+@media (max-width: 768px) {
+  #cart-container {
+    padding: 20px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cart-item img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 15px;
+  }
+
+  .cart-details {
+    align-items: center;
+  }
+
+  .cart-details h3,
+  .cart-details p {
+    text-align: center;
+  }
+
+  .quantity-controls {
+    justify-content: center;
+  }
+
+  .delete-btn {
+    align-self: center;
+  }
+
+  .cart-summary {
+    text-align: center;
+  }
+}
+

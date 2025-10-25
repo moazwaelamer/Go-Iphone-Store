@@ -51,9 +51,10 @@ const Navbar = () => {
 
         {currentUser ? (
           <>
-            <li style={{ color: "#ff004c", fontWeight: "bold" }}>
-              👋 Hello, {currentUser}
-            </li>
+           <li style={{ color: "#ffd700", fontWeight: "bold" }}>
+          👋 Hello, {currentUser}
+         </li>
+
             <li>
               <button
                 onClick={() => {
@@ -62,14 +63,15 @@ const Navbar = () => {
                 }}
                 style={{
                   background: "transparent",
-                  border: "1px solid #ff004c",
-                  color: "#fff",
+                 border: "1px solid #d4af37",
+                color: "#17150eff",
+
                   padding: "6px 12px",
                   borderRadius: "6px",
                   cursor: "pointer",
                 }}
               >
-                Logout
+              <p><b>Logout</b></p>
               </button>
             </li>
           </>

@@ -65,15 +65,15 @@ const ProductDetails = () => {
           />
           <h2 style={{ margin: "20px 0 10px" }}>{product.title}</h2>
           <p style={{ color: "#555" }}>{product.description}</p>
-          <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+          <p style={{ fontSize: "20px", fontWeight: "bold", color: "#555" }}>
             ${product.price}
           </p>
 
           <button
             onClick={() => addToCart(product)}
             style={{
-              backgroundColor: "#007bff",
-              color: "white",
+             backgroundColor: "#ffd700",
+            color: "white",
               border: "none",
               padding: "10px 20px",
               borderRadius: "5px",
@@ -85,7 +85,7 @@ const ProductDetails = () => {
           </button>
 
           <div style={{ marginTop: "20px" }}>
-            <Link to="/" style={{ textDecoration: "none", color: "#007bff" }}>
+            <Link to="/" style={{ textDecoration: "none", color: "#ffd700"  }}  >
               ← Back to Home
             </Link>
           </div>
