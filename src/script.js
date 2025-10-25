@@ -24,45 +24,47 @@ export const products = {
     { id: 17, title: "iPhone 12 Pro", price: 21999, description: "Elegant and fast with A14 chip for multitasking and gaming.", image: "/images/12pro.jpg" },
     { id: 18, title: "iPhone 12", price: 19999, description: "5G-ready device with great performance and modern design.", image: "/images/12.jpg" },
     { id: 19, title: "iPhone 11 Pro Max", price: 17999, description: "Triple-camera system powered by the A13 chip for solid performance.", image: "/images/11promax.jpg" },
-    { id: 20, title: "iPhone 11", price: 15999, description: "Affordable iPhone with A13 chip and strong battery life.", image: "/images/iph11.jpg" },
+    { id: 20, title: "iPhone 11 Pro", price: 16999, description: "Premium design with A13 Bionic chip and dual camera system.", image: "/images/11pro.jpg" },
+    { id: 21, title: "iPhone 11", price: 15999, description: "Affordable iPhone with A13 chip and strong battery life.", image: "/images/iph11.jpg" },
   ],
 
   ipads: [
-    { id: 21, title: "iPad Air (M2)", price: 39999, description: "Lightweight design with M2 chip and stunning Liquid Retina display.", image: "/images/ipad air.jpg" },
-    { id: 22, title: "iPad Pro (M4)", price: 61999, description: "Most powerful iPad with M4 chip and Ultra Retina XDR display.", image: "/images/ipad pro.jpg" },
-    { id: 23, title: "iPad 10th Gen", price: 29999, description: "Affordable iPad with A14 chip, perfect for students and daily tasks.", image: "/images/ipad10.jpg" },
-    { id: 24, title: "iPad 11 (2024)", price: 32999, description: "Modern design iPad with USB-C and Apple Pencil support.", image: "/images/ipad11.jpg" },
-    { id: 25, title: "iPad Mini (6th Gen)", price: 31999, description: "Compact iPad with A15 chip and 8.3-inch Liquid Retina display.", image: "/images/ipadmini.jpg" },
+    { id: 22, title: "iPad Air (M2)", price: 39999, description: "Lightweight design with M2 chip and stunning Liquid Retina display.", image: "/images/ipad air.jpg" },
+    { id: 23, title: "iPad Pro (M4)", price: 61999, description: "Most powerful iPad with M4 chip and Ultra Retina XDR display.", image: "/images/ipad pro.jpg" },
+    { id: 24, title: "iPad 10th Gen", price: 29999, description: "Affordable iPad with A14 chip, perfect for students and daily tasks.", image: "/images/ipad10.jpg" },
+    { id: 25, title: "iPad 11 (2024)", price: 32999, description: "Modern design iPad with USB-C and Apple Pencil support.", image: "/images/ipad11.jpg" },
+    { id: 26, title: "iPad Mini (6th Gen)", price: 31999, description: "Compact iPad with A15 chip and 8.3-inch Liquid Retina display.", image: "/images/ipadmini.jpg" },
   ],
 
   macs: [
-    { id: 26, title: "MacBook Air (M3)", price: 64999, description: "Ultra-light laptop with M3 chip and long battery life.", image: "/images/macbookair.jpg" },
-    { id: 27, title: "MacBook Pro (M3 Pro)", price: 99999, description: "Professional-grade performance with M3 Pro chip and ProMotion display.", image: "/images/macbookpro.jpg" },
-    { id: 28, title: "iMac (M3)", price: 84999, description: "24-inch 4.5K Retina display with M3 chip and sleek design.", image: "/images/imac.jpg" },
+    { id: 27, title: "MacBook Air (M3)", price: 64999, description: "Ultra-light laptop with M3 chip and long battery life.", image: "/images/macbookair.jpg" },
+    { id: 28, title: "MacBook Pro (M3 Pro)", price: 99999, description: "Professional-grade performance with M3 Pro chip and ProMotion display.", image: "/images/macbookpro.jpg" },
+    { id: 29, title: "iMac (M3)", price: 84999, description: "24-inch 4.5K Retina display with M3 chip and sleek design.", image: "/images/imac.jpg" },
   ],
 
   watches: [
-    { id: 29, title: "Apple Watch Ultra 3", price: 49999, description: "Latest Apple Watch with better battery and rugged titanium design.", image: "/images/ultra3.jpg" },
-    { id: 30, title: "Apple Watch Ultra 2", price: 43999, description: "Durable smartwatch with bright display and advanced GPS.", image: "/images/ultra2.jpg" },
-    { id: 31, title: "Apple Watch Series 10", price: 29999, description: "New generation Apple Watch with larger screen and S10 chip.", image: "/images/series10.jpg" },
-    { id: 32, title: "Apple Watch Series 7", price: 19999, description: "Elegant design, fast charging, and advanced health tracking.", image: "/images/series7.jpg" },
-    { id: 33, title: "Apple Watch SE (2nd Gen)", price: 14999, description: "Affordable Apple Watch with great performance and essential features.", image: "/images/seriesse.jpg" },
+    { id: 30, title: "Apple Watch Ultra 3", price: 49999, description: "Latest Apple Watch with better battery and rugged titanium design.", image: "/images/ultra3.jpg" },
+    { id: 31, title: "Apple Watch Ultra 2", price: 43999, description: "Durable smartwatch with bright display and advanced GPS.", image: "/images/ultra2.jpg" },
+    { id: 32, title: "Apple Watch Series 10", price: 29999, description: "New generation Apple Watch with larger screen and S10 chip.", image: "/images/series10.jpg" },
+    { id: 33, title: "Apple Watch Series 7", price: 19999, description: "Elegant design, fast charging, and advanced health tracking.", image: "/images/series7.jpg" },
+    { id: 34, title: "Apple Watch SE (2nd Gen)", price: 14999, description: "Affordable Apple Watch with great performance and essential features.", image: "/images/seriesse.jpg" },
   ],
 
   airpods: [
-    { id: 34, title: "AirPods Pro 3", price: 14999, description: "Next-gen AirPods with active noise cancellation and H3 chip.", image: "/images/airpodspro3.jpg" },
-    { id: 35, title: "AirPods Pro 2", price: 11999, description: "Excellent sound quality, noise cancellation, and MagSafe charging.", image: "/images/airpodspro2.jpg" },
-    { id: 36, title: "AirPods 4", price: 8999, description: "Lightweight wireless earbuds with clear sound and comfortable fit.", image: "/images/air4.jpg" },
+    { id: 35, title: "AirPods Pro 3", price: 14999, description: "Next-gen AirPods with active noise cancellation and H3 chip.", image: "/images/airpodspro3.jpg" },
+    { id: 36, title: "AirPods Pro 2", price: 11999, description: "Excellent sound quality, noise cancellation, and MagSafe charging.", image: "/images/airpodspro2.jpg" },
+    { id: 37, title: "AirPods 4", price: 8999, description: "Lightweight wireless earbuds with clear sound and comfortable fit.", image: "/images/air4.jpg" },
   ],
 
   jbls: [
-    { id: 37, title: "JBL Clip 4", price: 2499, description: "Portable waterproof Bluetooth speaker with powerful sound.", image: "/images/clip4.jpg" },
-    { id: 38, title: "JBL Go 4", price: 1899, description: "Compact Bluetooth speaker with clear sound and modern design.", image: "/images/go4.jpg" },
-    { id: 39, title: "JBL PartyBox 310", price: 15999, description: "Powerful party speaker with LED lights and deep bass.", image: "/images/partyboox.jpg" },
+    { id: 38, title: "JBL Clip 4", price: 2499, description: "Portable waterproof Bluetooth speaker with powerful sound.", image: "/images/clip4.jpg" },
+    { id: 39, title: "JBL Go 4", price: 1899, description: "Compact Bluetooth speaker with clear sound and modern design.", image: "/images/go4.jpg" },
+    { id: 40, title: "JBL PartyBox 310", price: 15999, description: "Powerful party speaker with LED lights and deep bass.", image: "/images/partyboox.jpg" },
   ],
 };
 
 export default products;
+
 
 
 
