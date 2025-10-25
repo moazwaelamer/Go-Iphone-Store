@@ -49,7 +49,7 @@ body {
 }
 
 .navbar h1 span.phone {
-  color: #d4af37;
+color: #ffd700;
   text-decoration: none;
   animation: none; 
 }
@@ -596,7 +596,6 @@ footer .footer-container h3 span.phone {
     background: #ff004c;
   }
 
-  /* منيو الموبايل */
   .navbar ul {
     position: absolute;
     top: 65px;
