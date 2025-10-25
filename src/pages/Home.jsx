@@ -20,7 +20,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    document.title = "Welcome";
+    document.title = "Go Iphone Store";
   }, []);
 
   return (

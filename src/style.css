@@ -43,16 +43,21 @@ body {
   letter-spacing: 1px;
 }
 
-.navbar h1 span {
-  color: #ff004c;
-  animation: pulse 1.8s infinite ease-in-out;
+.navbar h1 span.go {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.navbar h1 span.phone {
+  color: #d4af37;
+  text-decoration: none;
+  animation: none; 
 }
 
 .navbar ul {
   list-style: none;
   display: flex;
   gap: 25px;
-  transition: all 0.4s ease;
 }
 
 .navbar ul li a {
@@ -83,67 +88,14 @@ body {
   color: #ff004c;
   text-shadow: 0 0 10px #ff004c;
 }
-
-/* ================== Responsive Navbar ================== */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 6px;
+.logo {
+  text-decoration: none;
+  color: inherit;
+}
+.logo:hover {
+  color: inherit;
 }
 
-.menu-toggle span {
-  width: 26px;
-  height: 3px;
-  background: #fff;
-  border-radius: 3px;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .navbar {
-    padding: 15px 25px;
-  }
-
-  .navbar ul {
-    position: absolute;
-    top: 65px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    max-height: 0;
-    overflow: hidden;
-    text-align: center;
-    transition: max-height 0.4s ease;
-  }
-
-  .navbar ul.show {
-    max-height: 300px;
-    padding: 20px 0;
-  }
-
-  .navbar ul li {
-    margin: 10px 0;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-}
-
-/* Animation for hamburger icon toggle */
-.menu-toggle.active span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-
-.menu-toggle.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
-}
 
 /* ================== Main ================== */
 main {
@@ -289,13 +241,11 @@ footer {
 }
 
 .footer-container h3 {
-  font-size: 17px;
+  font-size: 26px;
   font-weight: 600;
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: #e9dee1;
-  text-shadow: 0 0 10px rgba(255, 0, 76, 0.4);
 }
 
 .footer-container p {
@@ -348,6 +298,13 @@ footer .copyright {
   font-size: 12px;
   color: #777;
   margin-top: 10px;
+}
+footer .footer-container h3 span.go {
+  color: #ffffff;
+}
+
+footer .footer-container h3 span.phone {
+  color: #d4af37;
 }
 
 /* Animation */
@@ -503,7 +460,7 @@ footer .copyright {
   color: white;
   transform: scale(1.05);
 }
-/* ================== Cart Summary ================== */
+
 .cart-summary {
   text-align: right;
   margin-top: 30px;
@@ -512,4 +469,175 @@ footer .copyright {
   font-size: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 15px;
+}
+/* ================== Mobile Navbar Fix ================== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+  }
+
+  .menu-toggle span {
+    width: 26px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  /* المنيو نفسها */
+  .navbar ul {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.95);
+    text-align: center;
+    transition: all 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+  }
+
+  .navbar ul.show {
+    opacity: 1;
+    visibility: visible;
+    padding: 20px 0;
+  }
+
+  .navbar ul li {
+    margin: 10px 0;
+  }
+}
+@media (max-width: 700px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    justify-items: center;
+    align-items: stretch; 
+  }
+
+  .product-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 360px; 
+    box-sizing: border-box;
+  }
+
+  .product-card img {
+    height: 180px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  .product-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;      
+    justify-self: center;     
+    width: 60%;               
+  }
+}
+/* ================== Navbar Responsive (منيو الموبايل فقط) ================== */
+
+/* في الشاشات الكبيرة */
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  position: static;
+  background: none;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+.menu-toggle {
+  display: none; /* اختفي في الشاشات الكبيرة */
+}
+
+/* في الموبايل فقط */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    background: none;
+    border: none;
+    z-index: 1001;
+  }
+
+  .menu-toggle span {
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.4s ease;
+  }
+
+  .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+    background: #ff004c;
+  }
+
+  .menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+    background: #ff004c;
+  }
+
+  /* منيو الموبايل */
+  .navbar ul {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    background: linear-gradient(135deg, rgba(15, 15, 25, 0.96), rgba(25, 20, 40, 0.96));
+    backdrop-filter: blur(14px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.45s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    z-index: 999;
+    padding: 0;
+  }
+
+  .navbar ul.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    padding: 25px 0;
+  }
+
+  .navbar ul li {
+    margin: 12px 0;
+  }
+
+  .navbar ul li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .navbar ul li a:hover {
+    color: #ff004c;
+    text-shadow: 0 0 10px rgba(255, 0, 76, 0.7);
+    transform: scale(1.08);
+  }
 }

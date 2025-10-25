@@ -25,9 +25,12 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <h1>
-        Go<span>Iphone</span>
-      </h1>
+       <Link to="/" className="logo">
+    <h1>
+      <span className="go">Go</span>
+      <span className="phone"> IPhone</span>
+    </h1>
+  </Link>
 
       <div
         className={`menu-toggle ${menuOpen ? "active" : ""}`}
