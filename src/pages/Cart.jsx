@@ -37,7 +37,7 @@ const Cart = () => {
         <h2>Your Cart</h2>
 
         {cartItems.length === 0 ? (
-          <p>Cart is empty</p>
+          <p>Your cart is empty</p>
         ) : (
           <>
             {cartItems.map((item) => (
@@ -45,7 +45,7 @@ const Cart = () => {
                 <img src={item.image} alt={item.title} width="120" />
                 <div className="cart-details">
                   <h3>{item.title}</h3>
-                  <p>{item.price}</p>
+                  <p>{item.price.toLocaleString()}L.E</p>
 
                   <div className="quantity-controls">
                     <button onClick={() => decreaseQuantity(item.id)}>-</button>
@@ -64,7 +64,7 @@ const Cart = () => {
             ))}
 
             <div className="cart-summary">
-              <h3>Total: ${totalPrice.toFixed(2)}</h3>
+              <h3>Total: {totalPrice.toLocaleString()} L.E</h3>
             </div>
           </>
         )}
@@ -75,6 +75,7 @@ const Cart = () => {
 };
 
 export default Cart;
+
 
 
 

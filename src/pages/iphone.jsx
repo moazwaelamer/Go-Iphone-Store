@@ -21,7 +21,7 @@
                 <img src={item.image} alt={item.title} />
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
-                <p className="price">{item.price}</p>
+                <p className="price">{item.price} L.E</p>
 
                 <div className="buttons">
                   <Link to={`/product/${item.id}`}>

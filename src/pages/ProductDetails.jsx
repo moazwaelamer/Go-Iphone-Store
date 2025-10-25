@@ -66,7 +66,7 @@ const ProductDetails = () => {
           <h2 style={{ margin: "20px 0 10px" }}>{product.title}</h2>
           <p style={{ color: "#555" }}>{product.description}</p>
           <p style={{ fontSize: "20px", fontWeight: "bold", color: "#555" }}>
-            {product.price}
+            {product.price} L.E
           </p>
 
           <button

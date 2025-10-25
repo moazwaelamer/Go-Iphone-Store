@@ -5,250 +5,87 @@ import { toast } from "react-toastify";
 // ------------------ بيانات المنتجات ------------------
 export const products = {
   iphones: [
-    {
-      id: 1,
-      title: "iPhone 17 Pro Max",
-      price: "99,999 L.E",
-      description:
-        "Apple’s most powerful iPhone with A19 Pro chip, 6.9-inch Super Retina XDR display, and pro-level cameras.",
-      image: "/images/17promax.jpg",
-    },
-    {
-      id: 2,
-      title: "iPhone 17 Pro",
-      price: "89,999 L.E",
-      description:
-        "Premium titanium design with A19 Pro chip and ProMotion display for ultra-smooth performance.",
-      image: "/images/17pro.jpg",
-    },
-    {
-      id: 3,
-      title: "iPhone 17",
-      price: "79,999 L.E",
-      description:
-        "The latest generation with A19 chip, strong battery life, and enhanced AI-powered camera.",
-      image: "/images/17.jpg",
-    },
-    {
-      id: 4,
-      title: "iPhone 16 Pro Max",
-      price: "84,999 L.E",
-      description:
-        "Stunning OLED display and A18 Pro chip for unmatched performance and speed.",
-      image: "/images/16promax.jpg",
-    },
-    {
-      id: 5,
-      title: "iPhone 16 Pro",
-      price: "74,999 L.E",
-      description:
-        "Powerful performance with A18 Pro chip and stainless-steel design.",
-      image: "/images/iphone16pro.jpg",
-    },
-    {
-      id: 6,
-      title: "iPhone 16",
-      price: "64,999 L.E",
-      description:
-        "Sleek design with A18 chip and advanced dual camera system.",
-      image: "/images/iphone16.jpg",
-    },
-    {
-      id: 7,
-      title: "iPhone 15 Pro Max",
-      price: "69,999 L.E",
-      description:
-        "Titanium build and A17 Pro chip with professional-grade photography features.",
-      image: "/images/15promax.jpg",
-    },
-    {
-      id: 8,
-      title: "iPhone 15 Pro",
-      price: "63,999 L.E",
-      description:
-        "Compact and premium iPhone with A17 Pro chip and sharp display.",
-      image: "/images/15pro.jpg",
-    },
-    {
-      id: 9,
-      title: "iPhone 15",
-      price: "54,999 L.E",
-      description:
-        "High performance with A16 chip and improved camera system.",
-      image: "/images/iph15.jpg",
-    },
-    {
-      id: 10,
-      title: "iPhone 14 Pro Max",
-      price: "49,999 L.E",
-      description:
-        "Large display and A16 chip for a smooth user experience.",
-      image: "/images/14promax.jpg",
-    },
-    {
-      id: 11,
-      title: "iPhone 14 Pro",
-      price: "45,999 L.E",
-      description:
-        "Professional camera and A16 chip with excellent display.",
-      image: "/images/14pro.jpg",
-    },
-    {
-      id: 12,
-      title: "iPhone 14",
-      price: "41,999 L.E",
-      description:
-        "Balanced performance with A15 chip and all-day battery life.",
-      image: "/images/14.jpg",
-    },
-    {
-      id: 13,
-      title: "iPhone 13 Pro Max",
-      price: "39,999 L.E",
-      description:
-        "A15 chip and pro camera system with smooth performance.",
-      image: "/images/13promax.jpg",
-    },
-    {
-      id: 14,
-      title: "iPhone 13 Pro",
-      price: "36,999 L.E",
-      description:
-        "Elegant design with A15 chip and excellent speed.",
-      image: "/images/13pro.jpg",
-    },
-    {
-      id: 15,
-      title: "iPhone 13",
-      price: "33,999 L.E",
-      description:
-        "Great value with A15 chip and reliable performance.",
-      image: "/images/iph13.jpg",
-    },
-    {
-      id: 16,
-      title: "iPhone 12 Pro Max",
-      price: "31,999 L.E",
-      description:
-        "OLED screen with A14 chip and powerful triple camera setup.",
-      image: "/images/12promax.jpg",
-    },
-    {
-      id: 17,
-      title: "iPhone 12 Pro",
-      price: "29,999 L.E",
-      description:
-        "Stylish and fast with A14 chip for smooth multitasking.",
-      image: "/images/12pro.jpg",
-    },
-    {
-      id: 18,
-      title: "iPhone 12",
-      price: "27,999 L.E",
-      description:
-        "5G-ready iPhone with A14 chip and modern design.",
-      image: "/images/12.jpg",
-    },
-    {
-      id: 19,
-      title: "iPhone 11 Pro Max",
-      price: "25,999 L.E",
-      description:
-        "Triple-camera system and A13 chip for reliable performance.",
-      image: "/images/11promax.jpg",
-    },
-    {
-      id: 20,
-      title: "iPhone 11 Pro",
-      price: "23,999 L.E",
-      description:
-        "Great camera and A13 chip at an affordable price.",
-      image: "/images/11pro.jpg",
-    },
-    {
-      id: 21,
-      title: "iPhone 11",
-      price: "21,999 L.E",
-      description:
-        "Budget-friendly iPhone powered by A13 chip with strong battery.",
-      image: "/images/iph11.jpg",
-    },
+    { id: 1, title: "iPhone 17 Pro Max", price: 95999, description: "Apple’s most powerful iPhone with A19 Pro chip, 6.9-inch Super Retina XDR display, and pro camera system.", image: "/images/17promax.jpg" },
+    { id: 2, title: "iPhone 17 Pro", price: 85000, description: "Elegant titanium design with A19 Pro chip for unmatched performance and smooth multitasking.", image: "/images/17pro.jpg" },
+    { id: 3, title: "iPhone 17", price: 62000, description: "Brilliant display with A18 chip for a fast and smooth daily experience with an advanced camera.", image: "/images/17.jpg" },
+    { id: 4, title: "iPhone 16 Pro Max", price: 75000, description: "Super Retina XDR display with professional cameras and A18 Pro chip for incredible performance.", image: "/images/16promax.jpg" },
+    { id: 5, title: "iPhone 16 Pro", price: 65000, description: "Excellent performance powered by A18 Pro chip and a stylish durable design.", image: "/images/iphone16pro.jpg" },
+    { id: 6, title: "iPhone 16", price: 46999, description: "Powerful performance and advanced dual camera system for Apple lovers.", image: "/images/iphone16.jpg" },
+    { id: 7, title: "iPhone 15 Pro Max", price: 51999, description: "Titanium build with A17 Pro chip delivering a premium experience.", image: "/images/15promax.jpg" },
+    { id: 8, title: "iPhone 15 Pro", price: 47999, description: "Outstanding performance with A17 Pro chip and pro-grade camera system.", image: "/images/15pro.jpg" },
+    { id: 9, title: "iPhone 15", price: 41999, description: "Excellent performance with A16 chip and upgraded camera features.", image: "/images/iph15.jpg" },
+    { id: 10, title: "iPhone 14 Pro Max", price: 38999, description: "Stunning display and pro camera setup with the A16 Bionic chip.", image: "/images/14promax.jpg" },
+    { id: 11, title: "iPhone 14 Pro", price: 35999, description: "Fast performance, smooth display, and high-quality camera system.", image: "/images/14pro.jpg" },
+    { id: 12, title: "iPhone 14", price: 32999, description: "Reliable Apple experience powered by the A15 Bionic chip.", image: "/images/14.jpg" },
+    { id: 13, title: "iPhone 13 Pro Max", price: 30999, description: "OLED display and A15 chip with professional camera capabilities.", image: "/images/13promax.jpg" },
+    { id: 14, title: "iPhone 13 Pro", price: 28999, description: "High performance and elegant design with A15 Bionic chip.", image: "/images/13pro.jpg" },
+    { id: 15, title: "iPhone 13", price: 25999, description: "Powerful A15 chip with great battery life and reliable performance.", image: "/images/iph13.jpg" },
+    { id: 16, title: "iPhone 12 Pro Max", price: 23999, description: "Smooth OLED display and A14 chip with triple-camera setup.", image: "/images/12promax.jpg" },
+    { id: 17, title: "iPhone 12 Pro", price: 21999, description: "Elegant and fast with A14 chip for multitasking and gaming.", image: "/images/12pro.jpg" },
+    { id: 18, title: "iPhone 12", price: 19999, description: "5G-ready device with great performance and modern design.", image: "/images/12.jpg" },
+    { id: 19, title: "iPhone 11 Pro Max", price: 17999, description: "Triple-camera system powered by the A13 chip for solid performance.", image: "/images/11promax.jpg" },
+    { id: 20, title: "iPhone 11", price: 15999, description: "Affordable iPhone with A13 chip and strong battery life.", image: "/images/iph11.jpg" },
   ],
 
   ipads: [
-    { id: 22, title: "iPad Air (M2)", price: "69,999 L.E", description: "Ultra-thin iPad with M2 chip, Liquid Retina display, and Apple Pencil Pro support.", image: "/images/ipad air.jpg" },
-    { id: 23, title: "iPad Pro (M4)", price: "129,999 L.E", description: "Professional-grade tablet with M4 chip, Ultra Retina XDR display, and advanced camera system.", image: "/images/ipad pro.jpg" },
-    { id: 24, title: "iPad 10th Gen", price: "44,999 L.E", description: "Affordable iPad with A14 chip, great for everyday tasks and entertainment.", image: "/images/ipad10.jpg" },
-    { id: 25, title: "iPad 11 (2024)", price: "54,999 L.E", description: "Sleek iPad with updated design, USB-C, and Apple Pencil compatibility.", image: "/images/ipad11.jpg" },
-    { id: 26, title: "iPad Mini (6th Gen)", price: "49,999 L.E", description: "Compact iPad with A15 chip and 8.3-inch Liquid Retina display.", image: "/images/ipadmini.jpg" },
-    { id: 27, title: "iPad 8th Gen", price: "32,999 L.E", description: "Classic iPad with A12 chip and 10.2-inch Retina display, perfect for students.", image: "/images/ipad8.jpg" },
+    { id: 21, title: "iPad Air (M2)", price: 39999, description: "Lightweight design with M2 chip and stunning Liquid Retina display.", image: "/images/ipad air.jpg" },
+    { id: 22, title: "iPad Pro (M4)", price: 61999, description: "Most powerful iPad with M4 chip and Ultra Retina XDR display.", image: "/images/ipad pro.jpg" },
+    { id: 23, title: "iPad 10th Gen", price: 29999, description: "Affordable iPad with A14 chip, perfect for students and daily tasks.", image: "/images/ipad10.jpg" },
+    { id: 24, title: "iPad 11 (2024)", price: 32999, description: "Modern design iPad with USB-C and Apple Pencil support.", image: "/images/ipad11.jpg" },
+    { id: 25, title: "iPad Mini (6th Gen)", price: 31999, description: "Compact iPad with A15 chip and 8.3-inch Liquid Retina display.", image: "/images/ipadmini.jpg" },
   ],
 
   macs: [
-    { id: 28, title: "MacBook Air (M3)", price: "119,999 L.E", description: "Lightweight laptop with M3 chip, long battery life, and Retina display.", image: "/images/macbookair.jpg" },
-    { id: 29, title: "MacBook Pro (M3 Pro)", price: "199,999 L.E", description: "High-performance laptop with M3 Pro chip, ProMotion display, and long battery life.", image: "/images/macbookpro.jpg" },
-    { id: 30, title: "iMac (M3)", price: "149,999 L.E", description: "All-in-one desktop with M3 chip, 24-inch 4.5K Retina display, and sleek design.", image: "/images/imac.jpg" },
+    { id: 26, title: "MacBook Air (M3)", price: 64999, description: "Ultra-light laptop with M3 chip and long battery life.", image: "/images/macbookair.jpg" },
+    { id: 27, title: "MacBook Pro (M3 Pro)", price: 99999, description: "Professional-grade performance with M3 Pro chip and ProMotion display.", image: "/images/macbookpro.jpg" },
+    { id: 28, title: "iMac (M3)", price: 84999, description: "24-inch 4.5K Retina display with M3 chip and sleek design.", image: "/images/imac.jpg" },
   ],
 
   watches: [
-    { id: 31, title: "Apple Watch Series 10", price: "79,999 L.E", description: "Latest Apple Watch with larger display, advanced health sensors, and S10 chip.", image: "/images/series10.jpg" },
-    { id: 32, title: "Apple Watch Series 7", price: "39,999 L.E", description: "Durable smartwatch with larger screen and fast charging.", image: "/images/series7.jpg" },
-    { id: 33, title: "Apple Watch SE (2nd Gen)", price: "27,999 L.E", description: "Affordable Apple Watch with core fitness tracking and essential health features.", image: "/images/seriesse.jpg" },
-    { id: 34, title: "Apple Watch Ultra 1", price: "79,999 L.E", description: "Adventure-ready smartwatch with rugged titanium case and extended battery.", image: "/images/ultra1.jpg" },
-    { id: 35, title: "Apple Watch Ultra 2", price: "89,999 L.E", description: "Second-gen Ultra with brighter display and improved GPS precision.", image: "/images/ultra2.jpg" },
-    { id: 36, title: "Apple Watch Ultra 3", price: "99,999 L.E", description: "Latest Ultra model with S10 chip, longer battery life, and enhanced durability.", image: "/images/ultra3.jpg" },
+    { id: 29, title: "Apple Watch Ultra 3", price: 49999, description: "Latest Apple Watch with better battery and rugged titanium design.", image: "/images/ultra3.jpg" },
+    { id: 30, title: "Apple Watch Ultra 2", price: 43999, description: "Durable smartwatch with bright display and advanced GPS.", image: "/images/ultra2.jpg" },
+    { id: 31, title: "Apple Watch Series 10", price: 29999, description: "New generation Apple Watch with larger screen and S10 chip.", image: "/images/series10.jpg" },
+    { id: 32, title: "Apple Watch Series 7", price: 19999, description: "Elegant design, fast charging, and advanced health tracking.", image: "/images/series7.jpg" },
+    { id: 33, title: "Apple Watch SE (2nd Gen)", price: 14999, description: "Affordable Apple Watch with great performance and essential features.", image: "/images/seriesse.jpg" },
   ],
 
   airpods: [
-    { id: 37, title: "AirPods Pro 3", price: "29,999 L.E", description: "Next-gen wireless earbuds with adaptive noise cancellation and H3 chip.", image: "/images/airpodspro3.jpg" },
-    { id: 38, title: "AirPods Pro 2", price: "24,999 L.E", description: "Premium earbuds with H2 chip, noise cancellation, and spatial audio.", image: "/images/airpodspro2.jpg" },
-    { id: 39, title: "AirPods 4", price: "17,999 L.E", description: "Comfortable fit with improved sound quality and adaptive EQ.", image: "/images/air4.jpg" },
+    { id: 34, title: "AirPods Pro 3", price: 14999, description: "Next-gen AirPods with active noise cancellation and H3 chip.", image: "/images/airpodspro3.jpg" },
+    { id: 35, title: "AirPods Pro 2", price: 11999, description: "Excellent sound quality, noise cancellation, and MagSafe charging.", image: "/images/airpodspro2.jpg" },
+    { id: 36, title: "AirPods 4", price: 8999, description: "Lightweight wireless earbuds with clear sound and comfortable fit.", image: "/images/air4.jpg" },
   ],
 
   jbls: [
-    { id: 40, title: "JBL Clip 4", price: "7,999 L.E", description: "Ultra-portable Bluetooth speaker with waterproof design and strong bass.", image: "/images/clip4.jpg" },
-    { id: 41, title: "JBL Go 4", price: "4,999 L.E", description: "Compact Bluetooth speaker with punchy sound and modern design.", image: "/images/go4.jpg" },
-    { id: 42, title: "JBL PartyBox 310", price: "49,999 L.E", description: "Powerful speaker with deep bass and LED light effects for parties.", image: "/images/partyboox.jpg" },
+    { id: 37, title: "JBL Clip 4", price: 2499, description: "Portable waterproof Bluetooth speaker with powerful sound.", image: "/images/clip4.jpg" },
+    { id: 38, title: "JBL Go 4", price: 1899, description: "Compact Bluetooth speaker with clear sound and modern design.", image: "/images/go4.jpg" },
+    { id: 39, title: "JBL PartyBox 310", price: 15999, description: "Powerful party speaker with LED lights and deep bass.", image: "/images/partyboox.jpg" },
   ],
 };
 
 export default products;
 
-
 // ------------------ CART FUNCTIONS ------------------
 
 export const getCartKey = () => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  return currentUser && currentUser.username ? `cart_${currentUser.username}` : null;
+  return currentUser && currentUser.username
+    ? `cart_${currentUser.username}`
+    : "cart_guest";
 };
 
 export const getCart = () => {
   const cartKey = getCartKey();
-  if (!cartKey) return [];
   return JSON.parse(localStorage.getItem(cartKey)) || [];
 };
 
 export const saveCart = (cart) => {
   const cartKey = getCartKey();
-  if (!cartKey) return;
   localStorage.setItem(cartKey, JSON.stringify(cart));
 };
 
-
 export const addToCart = (product) => {
   const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  if (!currentUser || !currentUser.username) {
-    toast.error("⚠️ Please login to add items to your cart.");
-    return;
-  }
-
-  if (!product || !product.id) {
-    console.error("Invalid product:", product);
-    toast.error("❌ Error adding product. Please try again.");
-    return;
-  }
-
-  const cartKey = `cart_${currentUser.username}`;
+  const cartKey = getCartKey();
   let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
 
   const existing = cart.find((item) => item.id === product.id);
