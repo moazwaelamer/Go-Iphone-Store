@@ -45,7 +45,7 @@ const Cart = () => {
                 <img src={item.image} alt={item.title} width="120" />
                 <div className="cart-details">
                   <h3>{item.title}</h3>
-                  <p>${item.price}</p>
+                  <p>{item.price}</p>
 
                   <div className="quantity-controls">
                     <button onClick={() => decreaseQuantity(item.id)}>-</button>
